@@ -4,16 +4,22 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "27e32eb8461351e6b9a90406602cfb5e",
-    "content-hash": "c358e78e6cbe18d44e36833437d9f062",
+    "hash": "f16dba2328d0d7922eb981024b4d62e7",
+    "content-hash": "91fa09114e9f6a4385e619f0708eeb27",
     "packages": [
         {
             "name": "finwo/cache",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "git@localhost:finwo/php-cache.git",
-                "reference": "ed9a42f4e1fc4f72cdef6a0664a379152727db0f"
+                "url": "https://github.com/finwo/php-cache.git",
+                "reference": "7f3bb125bed7b062ebc589a29d3985695001157d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/finwo/php-cache/zipball/7f3bb125bed7b062ebc589a29d3985695001157d",
+                "reference": "7f3bb125bed7b062ebc589a29d3985695001157d",
+                "shasum": ""
             },
             "require": {
                 "finwo/data-tools": "*@dev",
@@ -25,13 +31,14 @@
                     "Finwo\\Cache\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
                     "name": "Robin Bron",
                     "email": "robin@finwo.nl"
                 }
             ],
-            "time": "2016-04-13 22:36:04"
+            "time": "2016-04-13 23:06:14"
         },
         {
             "name": "finwo/data-tools",
