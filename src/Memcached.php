@@ -29,6 +29,7 @@ class Memcached extends Cache
     {
         if (null === $this->memcached) {
             $this->memcached = new \Memcached();
+            $this->memcached->addServer($this->server, $this->port);
         }
     }
 

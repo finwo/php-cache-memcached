@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/finwo/php-cache.git",
-                "reference": "7f3bb125bed7b062ebc589a29d3985695001157d"
+                "reference": "4a2503807243e9dc30e594ea542ac8c090a0e00a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/finwo/php-cache/zipball/7f3bb125bed7b062ebc589a29d3985695001157d",
-                "reference": "7f3bb125bed7b062ebc589a29d3985695001157d",
+                "url": "https://api.github.com/repos/finwo/php-cache/zipball/4a2503807243e9dc30e594ea542ac8c090a0e00a",
+                "reference": "4a2503807243e9dc30e594ea542ac8c090a0e00a",
                 "shasum": ""
             },
             "require": {
@@ -38,7 +38,7 @@
                     "email": "robin@finwo.nl"
                 }
             ],
-            "time": "2016-04-13 23:06:14"
+            "time": "2016-04-13 23:15:49"
         },
         {
             "name": "finwo/data-tools",
@@ -63,16 +63,13 @@
                     "Finwo\\Datatools\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "authors": [
                 {
                     "name": "Robin Bron",
                     "email": "robin@finwo.nl"
                 }
             ],
-            "support": {
-                "source": "https://github.com/finwo/data-tools-php/tree/master",
-                "issues": "https://github.com/finwo/data-tools-php/issues"
-            },
             "time": "2016-04-13 17:36:03"
         },
         {
