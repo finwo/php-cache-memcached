@@ -23,12 +23,17 @@ class Memcached extends Cache
      */
     protected $port = 11211;
 
+    /**
+     * @return \Memcached
+     */
     protected function getMemcached()
     {
         if (null === $this->memcached) {
             $this->memcached = new \Memcached();
             $this->memcached->addServer($this->server, $this->port);
         }
+
+        return $this->memcached;
     }
 
     public function __construct($options = array())
