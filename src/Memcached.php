@@ -52,14 +52,14 @@ class Memcached extends Cache
     public function fetch($key = '', $ttl = 30)
     {
         // Generate seperate keys for fetching
-        $key_lock = sprintf("%s_lock", $key);
-        $key_data = sprintf("%s_data", $key);
-        $key_ttl  = sprintf("%s_ttl",  $key);
+        $key_lock = md5(sprintf("%s_lock", $key));
+        $key_data = md5(sprintf("%s_data", $key));
+        $key_ttl  = md5(sprintf("%s_ttl",  $key));
 
         // Fetch memcached object
         $memcached = $this->getMemcached();
 
-        // Fetch TTL
+        // Fetch data
         $data_data = $memcached->get($key_data);
 
         // Return data if the current TTL is still valid
@@ -74,7 +74,7 @@ class Memcached extends Cache
 
         // Mark we're refreshing for ttl/10
         // Also give it 2 seconds, because some operations take time
-        $memcached->add($key_lock, true, max(2,$ttl/10));
+        $memcached->add($key_lock, 'Hello World', max(2,$ttl/10));
 
         // And return that we don't have recent data
         return false;
@@ -86,17 +86,24 @@ class Memcached extends Cache
     public function store($key = '', $value, $ttl = 30)
     {
         // Generate seperate keys for storing
-        $key_data = sprintf("%s_data", $key);
-        $key_ttl  = sprintf("%s_ttl",  $key);
+        $key_data = md5(sprintf("%s_data", $key));
+        $key_ttl  = md5(sprintf("%s_ttl",  $key));
+
+        // Pre-generate time
+        $time_data = max(3600, $ttl*10);
 
         // Fetch memcached object
         $memcached = $this->getMemcached();
 
         // Store data
-        $memcached->add($key_data, $value, max(3600, $ttl*10));
+        if($memcached->get($key_data)) {
+            $memcached->replace($key_data, $value, $time_data);
+        } else {
+            $memcached->add($key_data, $value, $time_data);
+        }
 
         // Store TTL
-        $memcached->add($key_ttl, true, $ttl);
+        $memcached->add($key_ttl, 'Hello World', $ttl);
 
         // Return ourselves
         return $this;
