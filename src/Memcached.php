@@ -1,8 +1,6 @@
 <?php
 
-namespace Fiwno\Cache;
-
-use Finwo\Cache\Cache;
+namespace Finwo\Cache;
 
 /**
  * Implements memcached
