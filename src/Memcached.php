@@ -51,22 +51,25 @@ class Memcached extends Cache
         $key_data = sprintf("%s_data", $key);
         $key_ttl  = sprintf("%s_ttl",  $key);
 
+        // Fetch memcached object
+        $memcached = $this->getMemcached();
+
         // Fetch TTL
-        $data_data = $this->memcached->get($key_data);
+        $data_data = $memcached->get($key_data);
 
         // Return data if the current TTL is still valid
-        if ($this->memcached->get($key_ttl)) {
+        if ($memcached->get($key_ttl)) {
             return $data_data;
         }
 
         // Return data if we're already "refreshing"
-        if ($this->memcached->get($key_lock)) {
+        if ($memcached->get($key_lock)) {
             return $data_data;
         }
 
         // Mark we're refreshing for ttl/10
         // Also give it 2 seconds, because some operations take time
-        $this->memcached->add($key_lock, true, max(2,$ttl/10));
+        $memcached->add($key_lock, true, max(2,$ttl/10));
 
         // And return that we don't have recent data
         return false;
@@ -81,10 +84,16 @@ class Memcached extends Cache
         $key_data = sprintf("%s_data", $key);
         $key_ttl  = sprintf("%s_ttl",  $key);
 
+        // Fetch memcached object
+        $memcached = $this->getMemcached();
+
         // Store data
-        $this->memcached->add($key_data, $value, max(3600, $ttl*10));
+        $memcached->add($key_data, $value, max(3600, $ttl*10));
 
         // Store TTL
-        $this->memcached->add($key_ttl, true, $ttl);
+        $memcached->add($key_ttl, true, $ttl);
+
+        // Return ourselves
+        return $this;
     }
 }
