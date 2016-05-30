@@ -4,25 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f16dba2328d0d7922eb981024b4d62e7",
-    "content-hash": "91fa09114e9f6a4385e619f0708eeb27",
+    "hash": "2f539c9bc9114dabe04045b0018bbadb",
+    "content-hash": "a89efc2080e35f50a3fdbf1064c2ee17",
     "packages": [
         {
             "name": "finwo/cache",
-            "version": "dev-master",
+            "version": "v0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/finwo/php-cache.git",
-                "reference": "4a2503807243e9dc30e594ea542ac8c090a0e00a"
+                "reference": "9342ec1ae2f0f682f4fe5cfcbd4829c977055304"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/finwo/php-cache/zipball/4a2503807243e9dc30e594ea542ac8c090a0e00a",
-                "reference": "4a2503807243e9dc30e594ea542ac8c090a0e00a",
+                "url": "https://api.github.com/repos/finwo/php-cache/zipball/9342ec1ae2f0f682f4fe5cfcbd4829c977055304",
+                "reference": "9342ec1ae2f0f682f4fe5cfcbd4829c977055304",
                 "shasum": ""
             },
             "require": {
-                "finwo/data-tools": "*@dev",
                 "php": ">=5.3"
             },
             "type": "library",
@@ -38,76 +37,13 @@
                     "email": "robin@finwo.nl"
                 }
             ],
-            "time": "2016-04-13 23:15:49"
-        },
-        {
-            "name": "finwo/data-tools",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/finwo/data-tools-php.git",
-                "reference": "25ef99b08544efd3056213573a3796b5a4824080"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/finwo/data-tools-php/zipball/25ef99b08544efd3056213573a3796b5a4824080",
-                "reference": "25ef99b08544efd3056213573a3796b5a4824080",
-                "shasum": ""
-            },
-            "require": {
-                "finwo/property-accessor": "dev-master"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Finwo\\Datatools\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Robin Bron",
-                    "email": "robin@finwo.nl"
-                }
-            ],
-            "time": "2016-04-13 17:36:03"
-        },
-        {
-            "name": "finwo/property-accessor",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/finwo/property-accessor.git",
-                "reference": "43a9b49f82ba566800068427c12d28ac48efa8e3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/finwo/property-accessor/zipball/43a9b49f82ba566800068427c12d28ac48efa8e3",
-                "reference": "43a9b49f82ba566800068427c12d28ac48efa8e3",
-                "shasum": ""
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Finwo\\PropertyAccessor\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "Robin Bron",
-                    "email": "robin@finwo.nl"
-                }
-            ],
-            "time": "2016-04-13 09:05:33"
+            "time": "2016-05-30 14:59:20"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "dev",
-    "stability-flags": {
-        "finwo/cache": 20
-    },
+    "minimum-stability": "stable",
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

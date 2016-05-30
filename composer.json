@@ -1,6 +1,6 @@
 {
     "name": "finwo/cache-memcached",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Robin Bron",
@@ -13,6 +13,6 @@
     "require": {
         "php": ">=5.3",
         "ext-memcached": "*",
-        "finwo/cache": "*@dev"
+        "finwo/cache": "*"
     }
 }
