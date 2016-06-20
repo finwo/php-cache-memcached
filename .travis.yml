@@ -7,4 +7,5 @@ php:
   - '7.0'
 
 install:
+  - pecl install -f memcached
   - composer update --prefer-dist
