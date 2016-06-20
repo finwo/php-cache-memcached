@@ -11,8 +11,8 @@
         "psr-4": { "Finwo\\Cache\\": "src" }
     },
     "require": {
-        "php": ">=5.3",
+        "php":           ">=5.3",
         "ext-memcached": "*",
-        "finwo/cache": "*"
+        "finwo/cache":   "*"
     }
 }

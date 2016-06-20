@@ -52,9 +52,9 @@ class Memcached extends Cache
     public function fetch($key = '', $ttl = 30)
     {
         // Generate seperate keys for fetching
-        $key_lock = md5(sprintf("%s_lock", $key));
-        $key_data = md5(sprintf("%s_data", $key));
-        $key_ttl  = md5(sprintf("%s_ttl",  $key));
+        $key_lock = \md5(\sprintf("%s_lock", $key));
+        $key_data = \md5(\sprintf("%s_data", $key));
+        $key_ttl  = \md5(\sprintf("%s_ttl",  $key));
 
         // Fetch memcached object
         $memcached = $this->getMemcached();
@@ -86,11 +86,11 @@ class Memcached extends Cache
     public function store($key = '', $value, $ttl = 30)
     {
         // Generate seperate keys for storing
-        $key_data = md5(sprintf("%s_data", $key));
-        $key_ttl  = md5(sprintf("%s_ttl",  $key));
+        $key_data = \md5(\sprintf("%s_data", $key));
+        $key_ttl  = \md5(\sprintf("%s_ttl",  $key));
 
         // Pre-generate time
-        $time_data = max(3600, $ttl*10);
+        $time_data = \max(3600, $ttl*10);
 
         // Fetch memcached object
         $memcached = $this->getMemcached();
