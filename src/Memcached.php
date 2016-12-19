@@ -91,6 +91,9 @@ class Memcached extends Cache
 
         // Pre-generate time
         $time_data = \max(3600, $ttl*10);
+        if ($ttl === 0) {
+            $time_data = 0;
+        }
 
         // Fetch memcached object
         $memcached = $this->getMemcached();
