@@ -13,6 +13,6 @@
     "require": {
         "php":           ">=5.3",
         "ext-memcached": "*",
-        "finwo/cache":   "*"
+        "finwo/cache":   "^0.4"
     }
 }

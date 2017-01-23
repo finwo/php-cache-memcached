@@ -4,21 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "899d50e9cdbdb7d9fbcfbe3e63f19085",
-    "content-hash": "a89efc2080e35f50a3fdbf1064c2ee17",
+    "content-hash": "78cd77a06ef112de6d47ed90739fa5ef",
     "packages": [
         {
             "name": "finwo/cache",
-            "version": "v0.3.1",
+            "version": "v0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/finwo/php-cache.git",
-                "reference": "caccc641cb0fd6973a654a2f333c4a91e32798d3"
+                "reference": "68769a66e31049c934389f1d22fe09f88c6a4867"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/finwo/php-cache/zipball/caccc641cb0fd6973a654a2f333c4a91e32798d3",
-                "reference": "caccc641cb0fd6973a654a2f333c4a91e32798d3",
+                "url": "https://api.github.com/repos/finwo/php-cache/zipball/68769a66e31049c934389f1d22fe09f88c6a4867",
+                "reference": "68769a66e31049c934389f1d22fe09f88c6a4867",
                 "shasum": ""
             },
             "require": {
@@ -40,7 +39,7 @@
                     "email": "robin@finwo.nl"
                 }
             ],
-            "time": "2016-06-20 08:54:06"
+            "time": "2017-01-23T13:06:05+00:00"
         }
     ],
     "packages-dev": [],

@@ -111,4 +111,12 @@ class Memcached extends Cache
         // Return ourselves
         return $this;
     }
+
+    /**
+     * (@inheritdoc}
+     */
+    public function supported()
+    {
+        return class_exists('Memcached');
+    }
 }
