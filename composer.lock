@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "78cd77a06ef112de6d47ed90739fa5ef",
+    "content-hash": "7ee2591fa52ac9c0595ff005a0bf9df3",
     "packages": [
         {
             "name": "finwo/cache",
-            "version": "v0.4.0",
+            "version": "v0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/finwo/php-cache.git",
-                "reference": "68769a66e31049c934389f1d22fe09f88c6a4867"
+                "reference": "53a60fd4705216e13716a43b76de333bb1254488"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/finwo/php-cache/zipball/68769a66e31049c934389f1d22fe09f88c6a4867",
-                "reference": "68769a66e31049c934389f1d22fe09f88c6a4867",
+                "url": "https://api.github.com/repos/finwo/php-cache/zipball/53a60fd4705216e13716a43b76de333bb1254488",
+                "reference": "53a60fd4705216e13716a43b76de333bb1254488",
                 "shasum": ""
             },
             "require": {
@@ -39,7 +39,7 @@
                     "email": "robin@finwo.nl"
                 }
             ],
-            "time": "2017-01-23T13:06:05+00:00"
+            "time": "2017-01-23T13:23:13+00:00"
         }
     ],
     "packages-dev": [],
@@ -49,8 +49,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.3",
-        "ext-memcached": "*"
+        "php": ">=5.3"
     },
     "platform-dev": []
 }
